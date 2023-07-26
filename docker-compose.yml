@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  clientes-app:
+    depends_on: 
+      - clientes-api
+    build: ./clientes-app
+    ports:
+      - 80:4200
+
+  clientes-api: 
+    build: ./clientes_api/clientes
+    ports: 
+      - 8080:8080
